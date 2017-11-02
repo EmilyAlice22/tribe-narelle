@@ -1,0 +1,68 @@
+// Tag Cloud
+.tagcloud,
+.at-post__tags {
+  a {
+    display: inline-block;
+    border: 1px solid #ebebeb;
+    line-height: 1;
+    color: #a1a1a1;
+    padding: 8px 10px;
+    margin: 0 3px 6px 0;
+    transition: all .2s ease-in-out;
+    &:hover {
+      border: 1px solid #424242;
+      color: #424242;
+    }
+  }
+}
+
+// Required WP Classes
+
+// Assitive Text
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  &:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    text-decoration: none;
+    text-transform: none;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+  }
+}
+
+.wp-caption {
+  color: inherit;
+}
+
+.wp-caption-text {
+  color: inherit;
+}
+
+.sticky {
+  color: inherit;
+}
+
+.gallery-caption {
+  color: inherit;
+}
+
+.bypostauthor {
+  color: inherit;
+}

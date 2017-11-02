@@ -1,0 +1,221 @@
+// Comment Form
+.at-commentform {
+  @extend %at-clearfix;
+  background: $cs-grey;
+  margin: 0 0 $at-vertspace;
+  padding: 25px;
+
+  .required {
+    color: red;
+  }
+
+  .at-commentform__title {
+    margin: 0 0 $at-vertspace;
+    color: #333;
+    font-size: 18px;    
+    line-height: 1.3;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+
+    small {
+      a {
+        float: right;
+        font-size: 15px;
+        line-height: 2.2;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .logged-in-as {
+    margin: 0 0 $at-vertspace;
+    font-size: 15px;
+  }
+
+  .at-commentform__author,
+  .at-commentform__email,
+  .at-commentform__comment {
+    margin: 0 0 $at-vertspace;
+  }
+  .at-commentform__author,
+  .at-commentform__email {
+    width: 100%;
+    float: left;
+    @media screen and (min-width: 520px){ 
+      width: 50%;
+    }
+  }
+  .at-commentform__author {
+    @media screen and (min-width: 520px){ 
+      padding-right: ($at-vertspace / 2);
+    }
+  }
+  .at-commentform__email {
+    @media screen and (min-width: 520px){ 
+      padding-left: ($at-vertspace / 2);
+    }
+  }
+
+  .at-commentform__comment {
+    textarea  {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .at-commentform__submit {
+    margin-bottom: 0;
+  }
+}
+
+.at-commentslist {
+  background: $cs-grey;
+  margin: 0 0 ($at-vertspace);
+  padding: 25px;
+
+  .at-commentslist__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #272727;
+    margin: 0 0 $at-vertspace;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &.children {
+      margin-left: 10px;
+      @media screen and (min-width: 520px){ 
+        margin-left: 25px;
+      }
+      @media screen and (min-width: 720px){ 
+        margin-left: 40px;
+      }
+
+    }
+
+  }
+
+  > ol {
+
+    > li {
+
+      &:last-child {
+
+        .at-comment {
+          margin-bottom: 0;
+        }
+
+      }
+
+    }
+
+  } 
+
+  li.pingback {
+    background: #fff;
+    padding: 10px 25px;
+    margin: 15px 0;
+  }
+
+}
+
+
+// The comment itself
+.at-comment {
+  @extend %at-clearfix;
+  background: #fff;
+  margin: 0 0 $at-vertspace;
+  padding: 25px;
+
+  .at-comment__header {
+    //@extend %at-clearfix;
+    margin: 0 0 ($at-vertspace / 2);
+  }
+  .at-comment__author {}
+
+  .at-comment__authoravatar {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+    border-radius: 99%;
+  }
+
+  .at-comment__authorname {
+    display: block;
+    padding: 10px 0 6px;
+    color: $at-heading-color;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1;
+    font-family: $at-heading-family;
+    text-transform: uppercase;
+
+    a {
+      color: $at-heading-color;
+      text-decoration: none;
+    }
+  }
+
+  .at-comment__time {
+    display: block;
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 1;
+    font-style: italic;
+
+    a {
+      color: #b3b3b3;
+      text-decoration: none;
+    }
+  }
+
+  .at-comment__actions {
+    text-align: right;
+    a {
+      display: inline-block;
+      background: $cs-grey;
+      color: #666666;
+      line-height: 1;
+      font-size: 13px;
+      padding: 5px;
+      text-decoration: none;
+      //text-transform: uppercase;
+
+      &:hover {}
+    }
+
+    .comment-edit-link { }
+  }
+
+  .at-comment__content {
+    @extend %at-clearfix;
+    margin: 0 0 ($at-vertspace / 2);
+
+
+    p {
+      margin: 0 0 $at-vertspace;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .at-comment__content,
+  .at-comment__footer {
+    margin-left: 80px;
+  }
+
+  .at-comment__moderation {
+    background: #f3f8fb;
+    padding: 16px 20px;
+    margin: 0 0 18px 80px;
+    font-size: 15px;
+    border-radius: 4px;
+  }
+}

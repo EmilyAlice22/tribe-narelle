@@ -1,0 +1,15 @@
+.woocommerce .product .at-post__thumb {
+  overflow: hidden;
+  margin-bottom: 0; }
+  .woocommerce .product .at-post__thumb img {
+    width: 100%; }
+  .woocommerce .product .at-post__thumb .thumbnails {
+    display: none; }
+.woocommerce .product .woocommerce-tabs {
+  background: #fff;
+  margin: 0 25px;
+  padding: 0 50px 25px; }
+  .woocommerce .product .woocommerce-tabs ul {
+    margin: auto; }
+
+/*# sourceMappingURL=_woocommerce.css.map */

@@ -1,0 +1,49 @@
+.at-socialfooter {
+  @extend %at-clearfix;
+  background: #f2f2f2;
+  padding: ($at-vertspace * 1.5) 0;
+
+  .at-socialfooter__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #272727;
+    margin: 0 0 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  ul {
+    @extend %at-clearfix;
+    display: table;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      text-align: center;
+      padding: 0 25px;
+    }
+    a {
+      color: #999999;
+      line-height: 1;
+      text-decoration: none;
+      vertical-align: middle;
+      padding: 10px 0;
+      display: block;
+      svg {
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+        position: relative;
+        top: -1px;
+        height: 28px;
+        width: 28px;
+        path,
+        circle {
+          fill: #999999;
+        }
+      }
+    }
+  }
+}

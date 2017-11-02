@@ -1,0 +1,72 @@
+.gallery {
+  @extend %at-clearfix;
+  margin: 0 0 $at-vertspace;
+
+  &.gallery-columns-2 {
+    .gallery-item {
+      float: left;
+      width: 50%;
+
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
+  }
+
+  &.gallery-columns-3 {
+    .gallery-item {
+      float: left;
+      width: 33.3333%;
+
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+  }
+
+  &.gallery-columns-4 {
+    .gallery-item {
+      float: left;
+      width: 25%;
+
+      &:nth-child(4n+5) {
+          clear: left;
+      }
+    }
+  }
+
+  &.gallery-columns-5 {
+    .gallery-item {
+      float: left;
+      width: 20%;
+
+      &:nth-child(5n+6) {
+        clear: left;
+      }
+    }
+  }
+
+  &.gallery-columns-6 {
+    .gallery-item {
+      float: left;
+      width: 16.666%;
+
+      &:nth-child(6n+7) {
+        clear: left;
+      }
+    }
+  }
+
+  .gallery-item {
+    margin: 0 0 ($at-vertspace / 2);
+
+    a {
+      display: block;
+      line-height: 0;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}

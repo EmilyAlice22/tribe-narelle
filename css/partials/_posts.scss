@@ -1,0 +1,406 @@
+.at-pagewrapper--sbright .at-page, .at-pagewrapper--sleft .at-page {
+   @media screen and (min-width: 768px){ 
+      padding-top: 10px;
+    }
+}
+
+
+.at-post {
+  @extend %at-clearfix;
+  position: relative;
+  margin: 0 0 $at-vertspace;
+
+  &.at-post--mini {
+    //background: $cs-grey;
+    //padding: ($at-vertspace) 0;
+    .at-post__contentwrap {
+      margin-top: 15px;
+      @media screen and (min-width: 520px){
+        margin-top: 25px;
+      }
+    }
+    &.has-post-thumbnail {
+      //padding: 0 0 ($at-vertspace);
+      .at-post__contentwrap {
+        margin-top: -($at-vertspace);
+      }
+    }
+    .at-post__contentwrap {
+      padding: ($at-vertspace * 1.5) ($at-vertspace / 1.5);
+      @media screen and (min-width: 520px){ 
+        padding: ($at-vertspace * 1.5) ($at-vertspace * 2);
+      }
+    }
+  }
+
+  &.at-post--square {
+    background: $cs-grey;
+    padding: 0 0 20px 0;
+    @media screen and (min-width: 880px){ 
+      padding: 20px 0;
+    }
+    .at-post__thumb {
+      @media screen and (min-width: 520px){ 
+       height: 330px;
+      }
+       height: 250px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @media screen and (min-width: 880px) {
+        height: auto;
+        width: 50%;
+        position: absolute;
+      }
+      > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .at-post__contentwrap {
+      
+      padding: 20px;
+      
+      @media screen and (min-width: 520px){
+        padding: 30px;
+      }
+      @media screen and (max-width: 880px) {
+        margin-top: -25px;
+      }
+      @media screen and (min-width: 880px) {    
+        margin: 0 20px;
+        padding: 35px 30px;
+
+        &.at-post__with-thumbnail {
+          width: 55%;
+          float: right;
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+    .at-post__title {
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 ($at-vertspace / 1.5);
+      text-align: center;
+      @media screen and (min-width: 880px) {
+        text-align: left;
+      }
+    }
+  }
+
+  &.at-post--single {
+    background: $cs-grey;    
+    padding: ($at-vertspace * 1.5) 0;
+    &.has-post-thumbnail {
+      padding: 0 0 ($at-vertspace);
+      .at-post__contentwrap {
+        margin-top: -($at-vertspace);
+        @media screen and (min-width: 520px){      
+          margin-top: -($at-vertspace * 4);
+        }        
+      }
+    }
+    .at-post__contentwrap {
+       padding: ($at-vertspace ) ($at-vertspace / 2);
+      @media screen and (min-width: 520px){      
+        padding: ($at-vertspace * 1.5) ($at-vertspace * 2);
+      }      
+    }
+  }
+
+  .at-post__contentwrap {
+    position: relative;
+    background: #fff;   
+    margin: 0 ($at-vertspace/2) 0;
+    @media screen and (min-width: 520px){      
+      margin: 0 $at-vertspace 0;
+    }
+  
+  }
+
+  .at-post__header {}
+
+  .at-post__thumb {
+    //margin: 0 0 $at-vertspace;
+    a {
+      display: block;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        &::before {          
+          background: rgba(0, 0, 0 , .1)
+        }
+      }
+    }
+    > img {
+      vertical-align: bottom;
+      width: 100%;
+    }
+  }
+  .at-post__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0 0 ($at-vertspace / 2);
+    text-align: center;
+    transition: color .3s ease-in-out;
+    &,
+    a {
+      color: $at-heading-color;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        color: lighten($at-heading-color, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+  .at-post__meta {
+    @extend %at-clearfix;
+    display: table;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto ($at-vertspace);
+    > li {
+      display: inline-block;
+      &::after {
+        content: '/';
+        margin: 0 5px;
+        display: inline-block;
+      }
+      &:last-child {
+        &::after {
+          content: none;
+          margin: 0;
+        }
+      }
+    }
+    &,
+    a {
+      color: #999;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .at-post__metaf {
+    margin: $at-vertspace auto 0;
+  }
+  .at-post__excerpt {
+    p {
+      margin: 0 0 $at-vertspace;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .at-post__content {
+    margin: 0 0 ($at-vertspace);
+  }
+  .at-post__readmore {
+    display: table;
+    padding: ($at-vertspace / 2) ($at-vertspace * 2);
+    margin: ($at-vertspace / 1.25) auto 0;
+    text-decoration: none;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: ($at-basetypo-size - 3);
+    color: #ec766a;
+    border: 1px solid #ec766a;
+    border-radius: 1px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background: #ec766a;
+      color: #fff;
+    }
+  }
+}
+
+//HIGHLIGHT
+
+.at-post.at-post--mini.at-post--highlight {
+   padding: 0 0 15px;
+    @media screen and (min-width: 520px) {
+      padding: 0 0 25px;
+    }
+    img{
+      width: 100%;
+    }
+}
+
+//STYE 1
+
+.at-content-style1 {
+
+  .at-post.at-post--mini {
+    padding: 0 0 15px;
+    @media screen and (min-width: 520px) {
+      padding: 0 0 25px;
+    }
+  }
+  .at-post__thumb {
+    max-height: 350px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+
+//STYLE 2
+.at-pagewrapper--sbright .at-content-style2, .at-pagewrapper--sbleft .at-content-style2 {
+  @media screen and (min-width: 992px) {
+    article {
+      width: 50%;
+      float: left;
+      display: flex;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    article {
+      width: 100%;
+    }
+  }
+
+  
+
+}
+
+.at-pagewrapper--sboff .at-content-style2 {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    article {
+      width: 50%;
+      float: left;
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    article {
+      width: 33.3%;
+      float: left;
+      display: flex;
+    }
+  }
+
+
+}
+
+.at-content-style2 {
+  @extend %at-clearfix;
+  margin: 0 0 25px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+
+   @media screen and (min-width: 768px) and (max-width: 939px)   {
+    margin: 0 0 25px -10px;
+  }
+  @media screen and (min-width: 940px)  {
+    margin: 0 -10px 25px ;
+  }
+ 
+ 
+  
+  .at-post {
+     position: relative;
+     width: 100%;
+
+   }
+
+  .at-blog__post {
+    @extend %at-clearfix;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      margin: 0 10px;
+    }
+
+    img {
+      width: 100%;
+      -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      cursor:pointer;
+      }
+    }
+    .at-blog__contentwrap { 
+      background: #fff;
+      margin: -40px 20px 20px;
+      padding: 25px 20px;
+      position: relative;
+      text-align: left;      
+      @media screen and (min-width: 520px) {
+        padding: 25px 25px;
+        margin: -40px 20px 20px;
+      }
+    }
+    .at-blog__posttitle {
+      margin: 0 0 ($at-vertspace / 1.5);
+      //font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      &,
+      a {
+        color: $at-heading-color;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    .at-blog__postthumb {
+      overflow: hidden;
+      //margin: 0 0 ($at-vertspace / 2);
+    }
+    .at-blog__excerpt {
+      font-size: 14px;
+      line-height: 22px;
+      p {
+        margin: 0 0 ($at-vertspace / 2);
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .at-blog__link {
+      display: block;
+      position:absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .at-post__meta{
+      margin: 25px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,248 @@
+.at_banner_widget{
+	margin: 0 0 ($at-vertspace * 2);
+  overflow: hidden;
+
+  img {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+  }
+  /*&:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }*/
+}
+.widget {
+  margin: 0 0 ($at-vertspace * 2);
+  border: 1px solid #ebebeb;
+  padding: $at-vertspace;
+  .widget__title {
+    display: block;
+    //background: $cs-grey;
+    //border-bottom: 3px double #fce2d3;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: #272727;
+    //padding: ($at-vertspace / 2) $at-vertspace;
+    margin: -41px 0 $at-vertspace;
+    text-align: center;
+    span {
+      background: #fff;
+      padding: 0 10px;
+      position: relative;
+      bottom: -6px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 0 ($at-vertspace / 2);
+      padding: 0 0 ($at-vertspace / 2);
+      border-bottom: 1px solid $cs-grey;
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+  a {
+    color: #272727;
+    text-decoration: none;
+  }
+  p {
+    margin: 0 0 $at-vertspace;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// About Me Widget
+.about-widget {
+  text-align: center;
+  .widget_aboutme__image {
+    margin: 0 0 ($at-vertspace / 2);
+  }
+}
+
+// Social Widget
+.at_social_widget {
+  .at-socialwidget {
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 10px;
+      line-height: 1;
+    }
+  }
+}
+
+
+// Posts Widget
+.at_posts_widget {
+  .at-widgetpost {
+    .at-widgetpost__thumb {
+      margin: 0 0 ($at-vertspace / 2);
+      a {
+        display: block;
+      }
+    }
+    .at-widgetpost__title {
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: normal;
+      margin: 0 0 5px;
+    }
+    .at-widgetpost__meta {
+      color: #999;
+    }
+     @media (max-width: 420px) {
+        .at-widgetpost__thumb {
+          width: 37%;
+          display: inline-block;
+        }
+        .at-widgetpost__title {
+          width: 60%;
+          display: inline-block;
+          vertical-align: middle;
+          padding-left:10px;
+          font-size: 12px;
+          line-height: 14px;
+          margin: auto;
+        }
+
+        .at-widgetpost__meta {
+          display: none;
+        }
+      }
+  }
+}
+
+// Search Widget
+.widget_search {
+  input[type="submit"] {
+    display: none;
+  }
+  label {
+    display: block;
+  }
+}
+
+// MC4WP Widget
+.widget_mc4wp_form_widget {
+  label {
+    display: none;
+  }
+  p {
+    margin: 0 0 15px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+}
+
+// Calendar Widget
+.widget_calendar {
+  max-width: 300px;
+  table {
+    width: 100%;
+
+    caption {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    thead {
+      font-size: 10px;
+      background: rgba(0, 0, 0, .04);
+
+      th {
+        padding-bottom: 10px;
+      }
+    }
+
+    tbody {
+      font-size: 11px;
+      color: #aaa;
+      background: transparent;
+
+      td {
+        background: #f5f7f8;
+        text-align: center;
+        padding: 3%;
+      }
+
+      .pad {
+        background: rgba(0, 0, 0, .04);
+      }
+    }
+
+    tfoot {
+      a {
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      #next {
+        text-align: right;
+      }
+
+      #prev {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+// RSS Widget
+.widget_rss {
+
+  .widget-title > a img {
+    margin: 0 5px 0 0;
+    position: relative;
+    top: 2px;
+  }
+
+  li {
+    margin: 0 0 20px;
+
+    a {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 15px;
+    }
+
+    .rss-date {
+      display: block;
+      color: #737980;
+      margin: 0 0 10px;
+      font-size: 13px;
+    }
+
+    .rssSummary {
+      margin: 0 0 10px;
+    }
+  }
+}
+
+// Recent Comments Widget
+.recentcomments {
+  a {
+    color: inherit;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}

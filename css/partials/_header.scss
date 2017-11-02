@@ -1,0 +1,10 @@
+.site-header {
+  @extend %at-clearfix;
+}
+
+.site-header__logowrap {
+  padding: ($at-vertspace * 2) 0;
+  margin: 0 auto;
+  text-align: center;
+}
+

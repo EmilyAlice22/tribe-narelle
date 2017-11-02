@@ -1,0 +1,80 @@
+
+
+
+/////////// CSS Output ///////////
+
+
+
+
+  .boxzilla-container .boxzilla {
+    margin:5px;
+    overflow-y: inherit !important;
+    padding: 35px;
+    @media (max-width:475px) {
+      width: 95%;
+    }
+    /*padding: 0px;
+    .boxzilla-content {
+      padding-right: 25px;
+      padding-left: 25px;
+
+    }
+      .first-child {
+        padding:0px;
+        margin: 0 -25px 50px -25px;
+        max-height: 200px;
+        overflow: hidden;
+
+        img {
+          width:100%
+        }
+      }
+    */
+
+  //Opt-in
+
+  .mc4wp-form {
+    text-align: center;
+    margin: 30px 0px 0px 0px;
+
+    p{
+      margin: 7px 0px;
+    }
+
+    button, input[type="reset"], input[type="submit"], input[type="button"] {
+      
+      background: #ec766a;
+         border: none;
+         border: 1px solid #ec766a;
+         color: #fff;
+         text-transform: uppercase;
+         margin-top: 15px;
+
+      &:hover {
+          background: #1a1a1a;
+          border: none;
+          border: 1px solid #1a1a1a;
+      }
+    }
+  }
+
+  }
+
+
+  
+
+
+
+.boxzilla-close-icon {
+    opacity: .75 !important;
+    font-size: 21px !important;
+    padding: 4px !important;
+    line-height: 11px !important;
+    color: #fff !important;
+    background: #000;
+    border-radius: 50px;
+    border-color: #fff;
+    border: solid 2px;
+    top: -8px !important;
+    right:-8px !important;
+  }

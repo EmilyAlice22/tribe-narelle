@@ -1,0 +1,130 @@
+
+
+// Homepage Optin
+.at-lead {
+  @extend %at-clearfix;
+  .mc4wp-form {
+    text-align: center;
+
+    input[type="submit"], input[type="button"] {
+      background: #ec766a;
+      border: none;
+      border: 1px solid #ec766a;
+      color: #fff;
+
+      &:hover {
+        background: #1a1a1a;
+        border: none;
+        border: 1px solid #1a1a1a;
+
+      }
+    }
+
+    
+    /*.mc4wp-form-fields {
+      @extend %at-clearfix;
+      width: 90%;
+      display: table;
+      margin: 0 auto;
+      @media screen and (min-width: 720px) {
+        p {
+          &:last-of-type {
+            width: 20%;
+          }
+        }
+      }
+    }
+    p {
+      margin: 0 0 10px;
+      text-align: left;      
+      @media screen and (min-width: 720px) {
+        margin: 0;
+        float: left;
+        width: 40%;
+      }
+    }
+    label {
+      display: none;
+    }
+    input {
+      width: 100%;
+      max-width: 96%;
+    }*/
+  }
+}
+
+
+// Homepage lead block
+// TODO: fix responsive
+
+.at-leadpage {
+
+  @media (max-width: 1100px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+}
+.at-lead, .at-leadpage {
+  @extend %at-clearfix;
+  position: relative;
+  background: $cs-grey;
+  
+   @media screen and (min-width: 1100px) {
+    margin: ($at-vertspace * 2) auto;
+  }
+
+  &.at-lead--hasimage {
+    
+    .at-lead__image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      @media screen and (min-width: 720px) {
+         width: 50%;
+      }
+      @media screen and (max-width: 720px) {
+         height: 300px;
+      }
+    }
+    .at-lead__contentwrap {
+      
+      @media screen and (max-width: 720px) {
+        margin-top: 265px;
+        padding: 20px;
+      }
+      @media screen and (min-width: 720px) {
+        width: 50%;
+        float: right;
+      }
+    }
+  }
+
+  .at-lead__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .at-lead__contentwrap {
+    position: relative;
+    background: #fff;
+    margin: 25px;    
+    padding: ($at-vertspace * 1.5) ($at-vertspace * 2);
+  }
+  .at-lead__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 ($at-vertspace);
+    text-align: center;
+  }
+  .at-lead__content {
+    p {
+      margin: 0 0 ($at-vertspace / 2);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

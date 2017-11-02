@@ -1,0 +1,50 @@
+// Posts Nav
+.posts-navigation {
+  @extend %at-clearfix;
+  .nav-previous a,
+  .nav-next a {
+    display: inline-block;
+    padding: ($at-vertspace / 2) ($at-vertspace * 2);
+    border: 1px solid #1a1a1a;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 1px;
+  }
+  .nav-previous {
+    float: right;
+  }
+  .nav-next {
+    float: left;
+  }
+}
+
+// Single Post Nav
+.at-postnav {
+  @extend %at-clearfix;
+  margin: 0 0 ($at-vertspace);
+  font-size: 15px;
+  .at-postnav__links {
+    a {
+      display: inline-block;
+      padding: ($at-vertspace / 2) ($at-vertspace);
+      border: 1px solid #1a1a1a;
+      font-size: 13px;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-radius: 1px;
+
+      &[rel="prev"] {
+        float: left;
+      }
+
+      &[rel="next"] {
+        float: right;
+      }
+    }
+  }
+}

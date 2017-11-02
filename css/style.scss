@@ -1,0 +1,204 @@
+// Prefix: at-
+
+// SASS Variables
+$at-basetypo-family: 'Open Sans', sans-serif; //default
+$at-basetypo-color: #424242;
+$at-basetypo-size: 15px;
+$at-basetypo-lineheight: 23px;
+
+$at-heading-family: 'Montserrat', sans-serif; //default
+$at-heading-color: #1a1a1a;
+
+$at-vertspace: 25px;
+$cs-grey: #f5f7f8; //#ecf0f2;
+$input-placeholder-color: #b3b3b3;
+
+// SASS Extends
+
+// Clearfix
+// Use @extend %at-clearfix; in element you want cleared
+%at-clearfix {
+	*zoom:1;
+	&:before,
+	&:after {
+		content: "";
+	    display: table;
+	}
+  	&:after {	    
+	    clear: both;
+	}
+}
+
+
+
+/*
+Table Of Contet
+
+* CSS Normalize
+* Body/Headings & Containers
+* Form Styles
+* Site Header
+* Site Footer
+* Posts & Entry-Content
+* Posts Related
+* Widgets
+* Social Share
+* Comments
+* Homepage
+* Footer Social Icons
+* Testimonials
+* Leadpages
+* Popups
+* Compat
+* Misc
+
+*/
+
+
+
+
+/////////// CSS Output ///////////
+
+
+// Load CSS Normalize
+@import "partials/libs/normalize";
+
+// apply a natural box layout model to all elements
+* {
+  box-sizing: border-box;
+}
+
+// Body
+html {
+	overflow-x: hidden;
+  height: 100%;
+}
+body {
+	min-height: 100%;
+	background: #fff;
+	color: $at-basetypo-color;
+  font-family: $at-basetypo-family;
+  font-size: $at-basetypo-size;
+  line-height: $at-basetypo-lineheight;
+	-webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $at-heading-family;
+	font-weight: 600;
+  color: $at-heading-color;
+}
+// Links
+a {
+  color: #ec766a;
+	text-decoration: none;
+	&:hover {
+    color: #ec766a;
+		text-decoration: none;
+	}
+}
+
+// img
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+// Table
+td, th {
+  padding: 2px 10px;
+ }
+
+// Container
+.at-sitecontainer {
+  background: #fff;
+
+  &.at-sitecontainer--boxed {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.at-container {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	//padding: 0 20px;
+  padding: 0 3%;
+  overflow: hidden;
+}
+
+// Form Styles
+@import "partials/forms";
+
+// Site Header
+@import "partials/header";
+
+// Site Footer
+@import "partials/footer";
+
+// Nav Footer
+@import "partials/nav-site-header";
+
+// Posts & Entry-Content
+@import "partials/posts";
+.at-post__content,
+.at-page__content,
+.at-comment__content {
+  @import "partials/entry-content";
+}
+.at-page__content {
+  margin: 0 0 ($at-vertspace * 2);
+}
+
+// Posts Related
+@import "partials/posts-related";
+
+// Widgets
+@import "partials/widgets";
+
+// Social Share
+@import "partials/socialshare";
+
+// Comments
+@import "partials/comments";
+
+// Homepage
+@import "partials/homepage";
+
+// Layout
+@import "partials/layout";
+
+// Footer Social Icons
+@import "partials/socialfooter";
+
+// Testimonials
+@import "partials/testimonials2";
+
+// Leadpages
+@import "partials/leadpage";
+
+// Popups
+@import "partials/popup";
+
+// Posts Nav
+@import "partials/posts-nav";
+
+// Compat
+@import "partials/compat";
+
+// Misc
+@import "partials/misc";
+
+// Woocommerce
+@import "partials/woocommerce";
+
